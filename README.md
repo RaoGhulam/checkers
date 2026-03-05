@@ -1,6 +1,36 @@
 # AI_Project_Checkers
+<img src="image.PNG"/>
 
-## 1. Introduction
+---
+
+## 1.Installation
+
+### 1.1 Clone the repository
+```bash
+git clone https://github.com/RaoGhulam/checkers.git
+cd checkers
+```
+
+### 1.2 Create and activate a virtual environment (optional but recommended)
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# Linux/macOS
+source venv/bin/activate
+
+# Windows
+# venv\Scripts\activate
+```
+
+### 1.3 Install dependencies
+```bash
+pip install -r requirements.txt
+```
+---
+
+## 2. Introduction
 This report outlines the development of an 8×8 Checkers game featuring:
 
 - Forced multiple jumps (mandatory capture moves)
@@ -11,8 +41,8 @@ This report outlines the development of an 8×8 Checkers game featuring:
 
 ---
 
-## 2. Game Rules & Features
-### 2.1. Standard Checkers Rules
+## 3. Game Rules & Features
+### 3.1. Standard Checkers Rules
 - Played on an 8×8 board.
 - Pieces move diagonally forward.
 - Forced captures: If a player can capture an opponent's piece, they must do so.
@@ -20,25 +50,25 @@ This report outlines the development of an 8×8 Checkers game featuring:
 - King promotion: A piece reaching the opponent's back row becomes a king (can move backward).
 - Win condition: The game ends when one player has no valid moves (either by losing all pieces or being blocked).
 
-### 2.2. AI Enhancements
+### 3.2. AI Enhancements
 - Minimax Algorithm: Evaluates possible moves up to a certain depth.
 - Alpha-Beta Pruning: Optimizes minimax by cutting off irrelevant branches.
 - Evaluation Function: Uses weighted heuristics to assess board states.
 
 ---
 
-## 3. AI Implementation
-### 3.1. Minimax Algorithm
+## 4. AI Implementation
+### 4.1. Minimax Algorithm
 - Recursive depth-based search to explore possible moves.
 - Maximizes AI score while minimizing player score.
 - Depth limitation for performance (typically 3-5 moves ahead).
 
-### 3.2. Alpha-Beta Pruning
+### 4.2. Alpha-Beta Pruning
 - Reduces computation time by eliminating branches that cannot influence the final decision.
 - Alpha (best already explored for maximizer).
 - Beta (best already explored for minimizer).
 
-### 3.3 Evaluation Function Implementation
+### 4.3 Evaluation Function Implementation
 
 The AI's decision-making is driven by a sophisticated evaluation function that analyzes 11 key game factors with carefully tuned weights.
 
@@ -73,7 +103,7 @@ The AI's decision-making is driven by a sophisticated evaluation function that a
 
 ---
 
-## 4. Pygame UI Implementation
+## 5. Pygame UI Implementation
 - Click-to-move piece selection and movement.
 - Highlighting of valid moves.
 - Visual distinction between normal pieces and kings.
@@ -81,7 +111,7 @@ The AI's decision-making is driven by a sophisticated evaluation function that a
 
 ---
 
-## 5. Conclusion
+## 6. Conclusion
 This Checkers implementation combines:  
 ✔ Classic rules (forced captures, kings).  
 ✔ Advanced AI (minimax + alpha-beta + evaluation function).  
